@@ -1,2 +1,10 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	import { faAngleDoubleDown, faAngleDoubleLeft, faAngleDoubleRight, faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons";
+	import Fa from "svelte-fa"
+	
+</script>
+
+<div class="bg-black size-full flex flex-col">
+	<a href="/mitoz">Mitoz</a>
+	<a href="/mayoz">Mayoz</a>
+</div>
