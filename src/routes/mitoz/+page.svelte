@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { faAngleDoubleDown, faAngleDoubleLeft, faAngleDoubleRight, faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons";
+	import { faAngleDoubleDown, faAngleDoubleLeft, faAngleDoubleRight, faAngleDoubleUp, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 	import Fa from "svelte-fa"
 
 	const keys = Object.keys(import.meta.glob("@/static/models/Mitoz/*.glb")).map(e => e.replace("/static", ""))
@@ -37,4 +37,8 @@
 			<Fa size={"lg"} icon={faAngleDoubleRight}/>
 		</button>
 	</div>
+
+	<a href="/" class="btn btn-square absolute ml-4 mt-4">
+		<Fa icon={faChevronLeft} />
+	</a>
 </div>

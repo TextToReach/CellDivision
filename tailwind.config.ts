@@ -5,7 +5,13 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			
+		},
+		screens: {
+			"desktop": "744px",
+			"mobile": "390px"
+		}
 	},
 
 	plugins: [
