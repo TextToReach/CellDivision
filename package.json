@@ -40,8 +40,11 @@
 		"@fortawesome/free-brands-svg-icons": "^6.7.2",
 		"@fortawesome/free-solid-svg-icons": "^6.7.2",
 		"@google/model-viewer": "^4.0.0",
+		"@types/js-yaml": "^4.0.9",
+		"preline": "^2.6.0",
 		"sass": "^1.83.0",
 		"sass-embedded": "^1.83.0",
-		"svelte-fa": "^4.0.3"
+		"svelte-fa": "^4.0.3",
+		"yaml": "^2.6.1"
 	}
 }

@@ -17,6 +17,7 @@
 		<div class="center flex gap-2">
 			<a href="/mitoz" class="btn hover:text-violet-700">Mitoz</a>
 			<a href="/mitoz" class="btn hover:text-violet-700">Mayoz</a>
+			<a href="/quiz" class="btn hover:text-violet-700">Quiz</a>
 		</div>
 		<div class="center hidden gap-2 desktop:flex">
 			<div class="tooltip tooltip-bottom" data-tip="Hakkımızda">
@@ -59,8 +60,5 @@
 </div>
 
 <style lang="scss">
-	.center {
-		align-items: center;
-		justify-content: center;
-	}
+	
 </style>

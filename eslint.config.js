@@ -31,7 +31,8 @@ export default ts.config(
 			}
 		},
 		rules: {
-			"svelte/valid-compile": ["error", { "ignoreWarnings": true }]
+			"svelte/valid-compile": ["error", { "ignoreWarnings": true }],
+			"@typescript-eslint/no-namespace": "off"
 		}
 	}
 );
