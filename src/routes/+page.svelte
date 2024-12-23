@@ -16,7 +16,7 @@
 		<div class="center flex select-none font-mono text-2xl font-bold text-white">BioP</div>
 		<div class="center flex gap-2">
 			<a href="/mitoz" class="btn hover:text-violet-700">Mitoz</a>
-			<a href="/mitoz" class="btn hover:text-violet-700">Mayoz</a>
+			<a href="/mayoz" class="btn hover:text-violet-700">Mayoz</a>
 			<a href="/quiz" class="btn hover:text-violet-700">Quiz</a>
 		</div>
 		<div class="center hidden gap-2 desktop:flex">
