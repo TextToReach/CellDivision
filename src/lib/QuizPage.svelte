@@ -29,11 +29,12 @@
 			};
 		});
 	});
+
 </script>
 
 <div class="flex size-full flex-col justify-between p-4 text-white">
 	{#if Question.Image}
-		<div class={`text-center font-merri text-2xl font-semibold flex flex-col-reverse desktop:!flex-row`}>
+		<div class="text-center font-merri text-2xl font-semibold flex flex-col-reverse desktop:!flex-row">
 			<div class="flex justify-center desktop:!justify-start items-start"><img class="rounded-lg max-h-52 min-w-52 mobile:max-h-72" src={Question.Image} alt=""/></div>
 			<div class="flex flex-1 desktop:justify-center desktop:items-center p-8 !pt-2">{Question.Quote}</div>
 		</div>
@@ -60,14 +61,16 @@
 
 <style lang="scss">
 	#optionsmenu {
-		@apply grid grid-cols-2 grid-rows-2 mobile:!flex mobile:*:!flex-1;
+		@apply grid grid-cols-2 grid-rows-2 mobile:!flex mobile:*:!flex-1 gap-4;
 
 		> .option {
 			// @apply border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700;
+			--backgroundcolor: oklch(var(--btn-color, var(--b1)) / var(--tw-bg-opacity));
+			--hoverbackgroundcolor: var(--fallback-b3, oklch(var(--b3) / var(--tw-bg-opacity)));
 
 			text-align: center !important;
 			display: inline-flex;
-			background-color: oklch(var(--btn-color, var(--b2)) / var(--tw-bg-opacity));
+			background-color: var(--backgroundcolor);
 			color: white;
 			border-radius: 1rem;
 			font-weight: 700;
@@ -77,11 +80,13 @@
 			height: 5rem;
 			font-size: large;
 			border-width: 4px;
-			border-color: black;
+			border-color: var(--backgroundcolor);
 			border-style: solid;
-
+			box-shadow: -5px 5px 20px 0px rgba(0,0,0,0.75);
+			
 			&:hover {
-				background-color: var(--fallback-b3, oklch(var(--b3) / var(--tw-bg-opacity)));
+				background-color: var(--hoverbackgroundcolor);
+				border-color: var(--hoverbackgroundcolor);
 				transform: scale(1.05);
 			}
 		}

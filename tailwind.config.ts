@@ -14,12 +14,23 @@ export default {
 				"inter": ["Inter", "mono"],
 				"lato": ["Lato", "mono"],
 				"merri": ["Merriweather", "mono"]
+			},
+			spacing: {
+				".1": "10%",
+				".2": "20%",
+				".3": "30%",
+				".4": "40%",
+				".5": "50%",
+				".6": "60%",
+				".7": "70%",
+				".8": "80%",
+				".9": "90%",
 			}
 		},
 		screens: {
 			"desktop": "744px",
 			"mobile": "416px",
-		}
+		},
 	},
 
 	plugins: [
