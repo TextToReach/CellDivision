@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { isNumeric } from "$lib";
 	import { faAngleDoubleDown, faAngleDoubleLeft, faAngleDoubleRight, faAngleDoubleUp, faBars, faBurger, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 	import fs from "fs";
 	import Fa from "svelte-fa";
@@ -6,14 +7,20 @@
 
 	const keys = Object.keys(import.meta.glob("@/static/models/Mitoz/*.glb")).map((e) => e.replace("/static", ""));
 	const YAMLINDEX = "a";
-	let index = $state(0);
+	let index: number = $state(1/4);
 	let src = $state("");
 
 	async function getYaml(): Promise<string> {
-		return String(yaml.parse(await (await fetch("mitozkonu.yaml")).text())[`${YAMLINDEX}.${String(src.split("/").at(-1)?.split(".")[0])}`]);
+		return String(yaml.parse(await (await fetch("config.yaml")).text())["exp"][`${YAMLINDEX}.${String(src.split("/").at(-1)?.split(".")[0])}`]);
 	}
 
 	$effect(() => {
+		console.log(index)
+		const params = new URLSearchParams(window.location.search)
+		if(params.get("tab") && isNumeric(params.get("tab") ?? "") && index === 1/4){
+			index = Number(params.get("tab"))
+			if(index > 1) index ++;
+		}
 		src = keys.at(index % keys.length)!;
 	});
 </script>

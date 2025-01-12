@@ -1,22 +1,27 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
 
-	let { TopImage, BottomText, To }: { TopImage: string; BottomText: string; To: string } = $props();
+	let { Image, To }: { Image: string; To: string } = $props();
 </script>
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
-<div class="card card-compact w-full bg-base-100 mobile:w-96 !rounded-[1rem]">
-	<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-	<div class="h-[15rem]" role="button" tabindex="-1" style="background-image: url({TopImage});" onclick={() => {goto(To)}}>
-
-	</div>
-	<div class="card-body whitespace-pre-line">
-		{BottomText.replaceAll('<br>', '\n').trim()}
+<div class="Card flex flex-col mx-auto h-[16rem] desktop:mx-0 card card-compact w-full !rounded-[1rem] border-4 border-solid border-transparent bg-base-100 transition-all duration-300 hover:border-violet-700 max-w-96">
+	<div
+		class="flex-1 bg-center"
+		role="button"
+		tabindex="-1"
+		style="background-image: url({Image});"
+		onclick={() => {
+			goto(To);
+		}}
+	></div>
+	<div class="card-body flex-grow-0 whitespace-pre-line text-center">
+		<slot name="description"></slot>
 	</div>
 </div>
 
 <style lang="scss">
-	.card {
+	.Card {
 		overflow: hidden; // Needed to hide image corner overflow
 		> div:nth-child(1) {
 			background-repeat: no-repeat;

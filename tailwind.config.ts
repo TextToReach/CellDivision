@@ -1,6 +1,8 @@
 import type { Config } from 'tailwindcss';
-import DaisyUI from "daisyui"
-import PrelineUI from "preline/plugin"
+import plugin from 'tailwindcss/plugin';
+import DaisyUI from "daisyui";
+import PrelineUI from "preline/plugin";
+import Unimportant from "tailwindcss-unimportant";
 
 export default {
 	content: [
@@ -30,12 +32,31 @@ export default {
 		screens: {
 			"desktop": "744px",
 			"mobile": "416px",
+			"wide": "1032px"
 		},
 	},
 
 	plugins: [
 		DaisyUI,
-		PrelineUI
+		PrelineUI,
+		Unimportant,
+		plugin(function ({ addUtilities }) {
+			addUtilities({
+				'.scrollbar-hide': {
+					/* IE and Edge */
+					'-ms-overflow-style': 'none',
+
+					/* Firefox */
+					'scrollbar-width': 'none',
+
+					/* Safari and Chrome */
+					'&::-webkit-scrollbar': {
+						display: 'none'
+					}
+				}
+			}
+			)
+		})
 	],
 	safelist: [
 		"border-red-500",

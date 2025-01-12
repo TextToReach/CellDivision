@@ -1,1 +1,0 @@
-Giresun Fen Lisesi
