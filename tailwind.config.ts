@@ -36,8 +36,12 @@ export default {
 		},
 	},
 
+	daisyui: {
+		themes: ["dark"]
+	},
+
 	plugins: [
-		DaisyUI,
+		DaisyUI ,
 		PrelineUI,
 		Unimportant,
 		plugin(function ({ addUtilities }) {
@@ -61,5 +65,6 @@ export default {
 	safelist: [
 		"border-red-500",
 		"border-green-500",
-	]
+	],
+	darkMode: "class"
 } satisfies Config;
