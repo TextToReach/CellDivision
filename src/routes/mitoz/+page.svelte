@@ -67,7 +67,7 @@
 		</div>
 		<div class="drawer-side">
 			<label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-			<ul class="menu min-h-full w-80 bg-base-200 p-4 text-base-content">
+			<ul class="menu min-h-full w-96 bg-base-200 p-4 text-base-content whitespace-pre-wrap">
 				<!-- Sidebar content here -->
 				{#key index}
 					{#await getYaml() then yamlResult}

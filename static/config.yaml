@@ -1,43 +1,121 @@
 exp:
-  a.a:
-    İnterfaz Açıklama
+  a.a: |
+    Hücre bölünmeye başlamadan önce hazırlık evresidir.
+    G1, S, G2 evrelerinden oluşur.
 
-  a.b:
-    Profaz Başı Açıklama
+    G1 evresi: 
+        ATP sentezi, RNA , organel ve protein sentezi hızlanır.
+        Sitoplazma miktarı artar
+        Çekirdek bölünme emri verir.
+    S evresi:
+        Hayvansal hücrelerde sentrozom eşlenir
+        DNA kendini eşler.
+    G2 evresi: 
+        DNA sentezi kontrol edilir.
+        RNA ve protein sentezi devam eder.
 
-  a.c:
-    Profaz Sonu Açıklama
 
-  a.d:
-    Metafaz Açıklama
+  a.b: |
+    •	Kromatin iplikler kısalıp kalınlaşarak kromozoma dönüşür.
+    •	Çekirdek zarı erir.
+    •	Çekirdekçik erir.
+    •	Sentrozom hayvan hücrelerinde iğ ipliklerini oluşturup zıt kutuplara çekilir.
+    •	Profazın sonuna doğru kromozomlar iğ ipliklerine kinetokorlarından tutunur.
 
-  a.e:
-    Anafaz Açıklama
+  a.c: |
+    •	Kromatin iplikler kısalıp kalınlaşarak kromozoma dönüşür.
+    •	Çekirdek zarı erir.
+    •	Çekirdekçik erir.
+    •	Sentrozom hayvan hücrelerinde iğ ipliklerini oluşturup zıt kutuplara çekilir.
+    •	Profazın sonuna doğru kromozomlar iğ ipliklerine kinetokorlarından tutunur.
 
-  a.f:
-    Telofaz ve Sitokinez Açıklama
+  a.d: |
+    •	Kromozomlar hücrenin ekvatoral bölgesinde tek sıra halinde dizilir.
+    •	Kromozomların en net göründüğü evredir.
+    •	Karyotip oluşturulur.
 
-  b.a:
-    "1"
-  b.b:
-    "2"
-  b.c:
-    "3"
-  b.d:
-    "4"
-  b.e:
-    "5"
-  b.f:
-    "6"
-  b.g:
-    "7"
-  b.h:
-    "8"
-  b.i:
-    "9"
-  b.j:
-    "10"
-  b.k:
-    "11"
+
+  a.e: |
+    •	Her kromozomun sentromeri aynı anda ikiye bölünür.
+    •	Kardeş kromatidler birbirinden ayrılır.
+    •	Her kromatid zıt kutuplara gider. Kromatid yarılanması olmuştur.
+    •	Her kromatid birer kromozomdur. Kromozom sayısı iki katına çıkmıştır.
+
+  a.f: |
+    •	Çekirdek zarı oluşur.
+    •	Çekirdekçik meydana gelir.
+    •	İğ iplikleri kaybolur.
+    •	Bir hücrenin içinde iki çekirdek olamayacağından sitokinez başlar.
+    •	Sitokinez: Hayvan hücrelerinde boğumlanma ile, bitki hücrelerinde ara lamel ile sitoplazma bölünür. 
+    •	Birbirine benzeyen n kromozomlu iki hücre oluşturur.
+
+
+  b.a: |
+    •	Mayoz geçirecek üreme ana hücreleri mayoz öncesi interfaz geçirir.
+    •	DNA eşlenir. Protein sentezi hızlanır.
+    •	Sentrozom eşlenir.
+
+  b.b: |
+    •	Kromatidler kısalıp kalınlaşarak kromozomlara dönüşür.
+    •	Homolog kromozomlar bir araya gelir.
+    •	Tetratları oluştururlar.
+    •	Kiyazma noktalarından bağlanarak sinapsis yaparlar.
+    •	Krosing over oluşturarak parça değişimi ile çeşitliliği desteklerler.
+    •	Çekirdek zarı erir.
+    •	Çekirdekçik kaybolur.
+    •	Eşlenmiş sentriyoller arasında iğ iplikleri oluşur, zıt kutuplara çekilir.
+
+  b.c: |
+    •	Kromozomların en belirgin göründükleri evredir.
+    •	Bu evrede homolog kromozom çiftleri diğer kromozom çiftlerinden bağımsız olarak şansa bağlı çift sıra halinde konumlanır.
+    •	Kromozom sayısının n adet kromozom sayısına inmesini sağlayan olay bu evredir.
+
+
+  b.d: |
+    •	Homolog kromozomlar bu evrede zıt kutuplara doğru çekilir.
+    •	Kromozom sayısının yarıya inmesini sağlayan evredir.
+    •	Kalıtsal çeşitliliğin sağlayan olayların temel nedenidir.  
+
+  b.e: |
+    •	Her kutupta n kromozom sayısı kadar kromozom bulunur.
+    •	Homolog kromozomlar ayrılmıştır.
+    •	Çekirdek zarı oluşur.
+    •	Çekirdekçik oluşur.
+    •	Bir hücrenin içinde iki tane çekirdek olamayacağından sitokinez başlar.
+
+  b.f: |
+    •	Hayvan hücrelerinde boğumlanma ile, bitki hücrelerinde ara lamel ile sitoplazma bölünür. Birbirinden farklı n kromozomlu iki hücre oluşur.	
+
+  b.g: |
+    Mayoz 2:
+    •	İnterfaz evresi yoktur. Mayoz 2 Mitoza benzetilir ancak kısa bir bekle evresi ile sentrozom eşlenir. Hücreler bölünmeye hazırdır. 
+    •	Mayoz 1 ile oluşan her iki hücre ayrı ayrı mayoz 2’ yi geçirir.
+
+    Profaz 1:
+    •	Çekirdek zarı erir.
+    •	Çekirdekçik kaybolur.
+    •	Sentriyoller eşlenip iğ iplikleri oluşur ve zıt kutuplara çekilir.
+
+
+  b.h: |
+    •	Homolog olmayan kromozomlar ekvator düzleminde tek sıra halinde dizilir.
+    •	Kromozomların en net göründüğü evredir.
+
+  b.i: |
+    •	Kardeş kromatidler birbirinden ayrılarak zıt kutuplara doğru çekilir.
+    •	Her kromatid aynı zamanda kromozomdur.
+
+  b.j: |
+    •	Zıt kutuplara çekilen kromozomlar tekrar kromatin iplik haline dönüşür.
+    •	Çekirdek zarı erir.
+    •	Çekirdekçik erir.
+    •	İğ iplikleri kaybolur.
+    •	Bir hücrenin içinde iki çekirdek olamayacağından çekirdek bölünmesi bitmiştir. Sitoplazma bölünmesi başlar.
+
+  b.k: |
+    •	Sitoplazma bölünmesi hayvan hücrelerinde boğumlanma ile, bitki hücrelerinde ara lamel ile gerçekleşir. 
+    •	Sitoplazma bölünmesi sonunda her mayoz geçiren hücreden 2 şer hücre oluşur. Toplam n kromozomlu birbirinden farklı 4 hücre meydana gelir.
+
+
 
 quiztime: 600
