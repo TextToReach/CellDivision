@@ -75,6 +75,7 @@ export default {
 			}
 		},
 		screens: {
+			"narrow": "390px",
 			"desktop": "744px",
 			"mobile": "416px",
 			"wide": "1032px"

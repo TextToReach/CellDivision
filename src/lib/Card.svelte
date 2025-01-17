@@ -5,7 +5,7 @@
 </script>
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
-<div class="Card flex flex-col mx-auto h-[16rem] desktop:mx-0 card card-compact w-full !rounded-[1rem] border-4 border-solid border-transparent bg-base-100 transition-all duration-300 hover:border-violet-700 max-w-96">
+<div class="Card flex flex-col mx-auto h-56 desktop:h-64 desktop:mx-0 card card-compact w-full !rounded-[1rem] border-4 border-solid border-transparent bg-base-100 transition-all duration-300 hover:border-violet-700 max-w-96">
 	<div
 		class="flex-1 bg-center"
 		role="button"

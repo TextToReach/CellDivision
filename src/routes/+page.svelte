@@ -55,13 +55,13 @@
 	const ekip = [
 		{ 
 			name: "Hamza TEMEL",
-			description: "Merhaba ben Hamza. 8 yaşımda blok tabanlı programlama ile yazılıma başladım. Yaklaşık 6 yıldır web geliştirme ile ilgileniyorum. Javascript, Typescript, Rust, C/C++, C#, Go, Zig, Python dillerine hakimim. Orta düzeyde Linux (Arch) bilgim var.",
-			imgurl: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+			description: "Merhaba ben Hamza. 8 yaşımda blok tabanlı programlama ile yazılıma başladım. Yaklaşık 6 yıldır web geliştirme ile ilgileniyorum. Javascript/Typescript, Rust, C/C++, C#, Go, Zig, Python, Java yazılım dillerini biliyorum. Css ve Tailwindcss bilgim var. Orta düzeyde Linux (Arch) bilgim var. İlişkisel veri tabanlarına (SQL) hakimim. React, Svelte, Vue.JS Javascript frameworklerine hakimim. Blender programını kullanabiliyorum. Godot (C#) ve Unity oyun motorlarına hakimim.",
+			imgurl: "/material/Avatar_Hamza.png"
 		},
 		{ 
 			name: "Ege Demirbaş",
-			description: "",
-			imgurl: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+			description: "Merhaba Ben Ege Demirbaş, 15 yaşında teknoloji tutkusuyla dolu bir öğrenciyim. Giresun Fen Lisesi'nde 10. sınıfta eğitimimi sürdürürken, bilgisayarlar ve yapay zeka teknolojisine olan ilgimle her gün kendimi geliştirmekten büyük keyif alıyorum. Bilgisayar ekranlarının ardındaki dünya benim için adeta bir oyun alanı; her yeni kod, her yeni keşif beni daha da motive ediyor.",
+			imgurl: "/material/Avatar_Ege.jpg"
 		},
 	];
 </script>
@@ -117,8 +117,8 @@
 </script>
 
 <div id="container" class="flex flex-row">
-	<nav class="fixed left-0 top-0 z-[999] flex h-20 w-full justify-center wide:justify-between bg-[#171717] px-4 wide:px-40">
-		<div class="select-none font-mono text-2xl font-bold text-white center hidden desktop:flex mr-8 wide:mr-0">BioP</div>
+	<nav class="fixed left-0 top-0 z-[999] flex *:flex-1x h-20 w-full justify-center bg-[#171717] px-4 wide:px-40">
+		<div class="select-none font-mono text-2xl font-bold text-white center hidden desktop:flex mr-8">BioP</div>
 		<div class="flex gap-2 center mx-4">
 			<a href="/mitoz" class="btn hover:text-violet-700">Mitoz</a>
 			<a href="/mayoz" class="btn hover:text-violet-700">Mayoz</a>
@@ -135,24 +135,12 @@
 			</div>
 
 		</div>
-		<div class="hidden gap-2 center wide:flex">
-			<div class="tooltip tooltip-bottom" data-tip="Hakkımızda">
-				<button class="btn hover:text-violet-700">
-					<Fa icon={faBook} class="hover:text-violet-700" />
-				</button>
-			</div>
-			<div class="tooltip tooltip-bottom" data-tip="Tech Stack">
-				<a href="/techstack" class="btn hover:text-violet-700">
-					<Fa icon={faComputer} class="hover:text-violet-700" />
-				</a>
-			</div>
-		</div>
 	</nav>
 
 	<main class="divide-y-2 divide-black overflow-y-scroll bg-base-300 scrollbar-hidden">
 		<section class="flex flex-col items-center justify-center gap-4 desktop:gap-0 wide:gap-4 wide:py-16" id="field0">
 			<h1 class="text-center [word-spacing:9999px]">Hücre Bölünmesi</h1>
-			<div class="inline-grid w-full grid-cols-2 gap-4 *:max-w-[280px] desktop:aspect-square desktop:w-auto desktop:gap-2 wide:flex wide:!aspect-auto wide:w-full wide:flex-row wide:justify-center" id="cardWrapper">
+			<div class="inline-grid w-full narrow:grid-cols-2 gap-4 *:max-w-[280px] desktop:aspect-square desktop:w-auto desktop:gap-2 wide:flex wide:!aspect-auto wide:w-full wide:flex-row wide:justify-center" id="cardWrapper">
 				<Card Image="mitosis.jpg" To="/mitoz">
 					<h6 slot="description" class="mx-4 my-2 flex-1 select-none mobile:my-0">Mitoz</h6>
 				</Card>
@@ -206,7 +194,7 @@
 						<div class="flex flex-col">
 							<div class="avatar flex flex-col items-center">
 								<button class="w-24 rounded-full" onclick={() => (document.getElementById(`member_modal_${index}`) as HTMLDialogElement).showModal()}>
-									<img class="rounded-full" src={member.imgurl} />
+									<img class="rounded-full aspect-square bg-black h-full" src={member.imgurl} />
 								</button>
 								<dialog id={`member_modal_${index}`} class="modal">
 									<div class="modal-box">
