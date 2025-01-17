@@ -9,7 +9,7 @@
 		<div class="divider divider-vertical"></div>
 		<div class="flex items-center gap-2 w-full">
 			<Fa icon={faStopwatch} class="" />
-			50dk
+			10dk
 		</div>
 
 		<div><a href="/quiz" class="btn hover:text-violet-700">Devam Et</a></div>

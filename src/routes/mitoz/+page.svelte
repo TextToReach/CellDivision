@@ -22,16 +22,18 @@
 	}
 
 	$effect(() => {
-		sound = new Howl({
-			src: [`/audio/mitozses/${faz.replaceAll("İ", "I").split(" ")[0]}.m4a`],
-			onpause: () => {
-				playing = false;
-			},
-
-			onplay: () => {
-				playing = true;
-			}
-		});
+		if(!!faz){
+			sound = new Howl({
+				src: [`/audio/mitozses/${faz.replaceAll("İ", "I").split(" ")[0]}.m4a`],
+				onpause: () => {
+					playing = false;
+				},
+				
+				onplay: () => {
+					playing = true;
+				}
+			});
+		}
 		const params = new URLSearchParams(window.location.search);
 		if (params.get("tab") && isNumeric(params.get("tab") ?? "") && index === 1 / 4) {
 			index = Number(params.get("tab"));

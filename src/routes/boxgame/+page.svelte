@@ -22,7 +22,7 @@
 	<div class="container m-16">
 		{#each cards as card}
 			<div class="tooltip" data-tip={card.replaceAll("cards/Mitoz_", "Mitoz ").replaceAll("cards/", "Mayoz ").replaceAll(".png", "").replaceAll("1", " 1").replaceAll("2", " 2")}>	
-				<div class="boxcard p-8">
+				<div class="boxcard p-1">
 					<div class="boxcardchild" style={`background-image: url(${card})`}></div>
 				</div>
 			</div>

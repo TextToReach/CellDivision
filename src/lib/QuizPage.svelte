@@ -34,12 +34,12 @@
 
 <div class="flex size-full flex-col justify-between p-4 text-white">
 	{#if Question.Image}
-		<div class="text-center font-merri text-2xl font-semibold flex flex-col-reverse desktop:!flex-row">
+		<div class="text-center font-mono text-lg font-semibold flex flex-col-reverse desktop:!flex-row whitespace-pre-wrap">
 			<div class="flex justify-center desktop:!justify-start items-start"><img class="rounded-lg max-h-52 min-w-52 mobile:max-h-72" src={Question.Image} alt=""/></div>
-			<div class="flex flex-1 desktop:justify-center desktop:items-center p-8 !pt-2">{Question.Quote}</div>
+			<div class="flex flex-1 desktop:justify-center desktop:items-center px-6 pt-2 pb-[auto]">{Question.Quote}</div>
 		</div>
 	{:else}
-		<div class="text-center font-merri text-2xl font-semibold">
+		<div class="text-center font-mono text-lg font-semibold whitespace-pre-line">
 			{Question.Quote}
 		</div>
 	{/if}
@@ -78,7 +78,7 @@
 			justify-content: center;
 			transition: all 300ms;
 			height: 5rem;
-			font-size: large;
+			font-size: medium;
 			border-width: 4px;
 			border-color: var(--backgroundcolor);
 			border-style: solid;

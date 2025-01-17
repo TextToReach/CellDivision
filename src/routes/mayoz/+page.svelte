@@ -23,7 +23,7 @@
 
 	$effect(() => {
 
-		if (!(faz.replaceAll("İ", "I").split(" ")[0] == "Sitokinez")){
+		if (!(faz.replaceAll("İ", "I").split(" ")[0] == "Sitokinez") && !!faz){
 			sound = new Howl({
 				src: [`/audio/mayozses/${faz.replaceAll("İ", "I")}.m4a`],
 				onpause: () => {
@@ -106,7 +106,7 @@
 					<div class="divider divider-horizontal"></div>
 					<button onclick={() => {
 						if(!(faz.replaceAll("İ", "I").split(" ")[0] == "Sitokinez")) {playing = !playing}
-					}}><Fa class="aspect-square h-full rounded-md bg-magnum-600 p-1 text-black transition-transform" icon={(faz.replaceAll("İ", "I").split(" ")[0] == "Sitokinez")? faTimes:(playing ? faPlay : faPause)} /></button>
+					}}><Fa class="aspect-square h-full rounded-md bg-magnum-600 p-1 text-black transition-transform" icon={(faz.replaceAll("İ", "I").split(" ")[0] == "Sitokinez")? faTimes:(playing ? faPause : faPlay)} /></button>
 				</div>
 				<div class="divider divider-vertical"></div>
 				{#key index}
