@@ -149,25 +149,25 @@
 				</Card>
 				<CardIterator unique="0" scrollable className="hidden desktop:block">
 					<svelte:fragment slot="elements">
-						<div onclick={() => { goto("/mitoz?tab=0") }} data-phase="İnterfaz" scrollee class="bg-contain size-full bg-red-700 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Mitoz_Interfaz.png);"></div>
-						<div onclick={() => { goto("/mitoz?tab=1") }} data-phase="Profaz" scrollee class="bg-contain size-full bg-blue-700 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Mitoz_Profaz.png);"></div>
-						<div onclick={() => { goto("/mitoz?tab=2") }} data-phase="Metafaz" scrollee class="bg-contain size-full bg-green-700 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Mitoz_Metafaz.png);"></div>
-						<div onclick={() => { goto("/mitoz?tab=3") }} data-phase="Anafaz" scrollee class="bg-contain size-full bg-yellow-400 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Mitoz_Anafaz.png);"></div>
-						<div onclick={() => { goto("/mitoz?tab=4") }} data-phase="Telofaz" scrollee class="bg-contain size-full bg-purple-600 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Mitoz_Telofaz.png);"></div>
+						<div onclick={() => { goto("/mitoz?tab=0") }} data-phase="İnterfaz" scrollee class="bg-contain size-full bg-base-200 cursor-pointer bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Mitoz_Interfaz.png);"></div>
+						<div onclick={() => { goto("/mitoz?tab=1") }} data-phase="Profaz" scrollee class="bg-contain size-full bg-base-200 cursor-pointer bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Mitoz_Profaz.png);"></div>
+						<div onclick={() => { goto("/mitoz?tab=2") }} data-phase="Metafaz" scrollee class="bg-contain size-full bg-base-200 cursor-pointer bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Mitoz_Metafaz.png);"></div>
+						<div onclick={() => { goto("/mitoz?tab=3") }} data-phase="Anafaz" scrollee class="bg-contain size-full bg-base-200 cursor-pointer bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Mitoz_Anafaz.png);"></div>
+						<div onclick={() => { goto("/mitoz?tab=4") }} data-phase="Telofaz" scrollee class="bg-contain size-full bg-base-200 cursor-pointer bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Mitoz_Telofaz.png);"></div>
 					</svelte:fragment>
 				</CardIterator>
 				<CardIterator unique="1" scrollable className="hidden desktop:block">
 					<svelte:fragment slot="elements">
-						<div onclick={() => { goto("/mayoz?tab=0") }} data-phase="İnterfaz" scrollee class="bg-contain size-full bg-red-700 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Interfaz.png);"></div>
-						<div onclick={() => { goto("/mayoz?tab=1") }} data-phase="Profaz 1" scrollee class="bg-contain size-full bg-blue-700 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Profaz1.png);"></div>
-						<div onclick={() => { goto("/mayoz?tab=2") }} data-phase="Metafaz 1" scrollee class="bg-contain size-full bg-green-700 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Metafaz1.png);"></div>
-						<div onclick={() => { goto("/mayoz?tab=3") }} data-phase="Anafaz 1" scrollee class="bg-contain size-full bg-yellow-400 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Anafaz1.png);"></div>
-						<div onclick={() => { goto("/mayoz?tab=4") }} data-phase="Telofaz 1" scrollee class="bg-contain size-full bg-purple-600 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Telofaz1.png);"></div>
-						<div onclick={() => { goto("/mayoz?tab=5") }} data-phase="Sitokinez 1" scrollee class="bg-contain size-full bg-orange-600 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Sitokinez1.png);"></div>
-						<div onclick={() => { goto("/mayoz?tab=6") }} data-phase="Profaz 2" scrollee class="bg-contain size-full bg-blue-700 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Profaz2.png);"></div>
-						<div onclick={() => { goto("/mayoz?tab=7") }} data-phase="Metafaz 2" scrollee class="bg-contain size-full bg-green-700 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Metafaz2.png);"></div>
-						<div onclick={() => { goto("/mayoz?tab=8") }} data-phase="Anafaz 2" scrollee class="bg-contain size-full bg-yellow-400 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Anafaz2.png);"></div>
-						<div onclick={() => { goto("/mayoz?tab=9") }} data-phase="Telofaz 2" scrollee class="bg-contain size-full bg-purple-600 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Telofaz2.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=0") }} data-phase="İnterfaz" scrollee class="bg-contain size-full bg-base-200 cursor-pointer bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Interfaz.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=1") }} data-phase="Profaz 1" scrollee class="bg-contain size-full bg-base-200 cursor-pointer bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Profaz1.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=2") }} data-phase="Metafaz 1" scrollee class="bg-contain size-full bg-base-200 cursor-pointer bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Metafaz1.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=3") }} data-phase="Anafaz 1" scrollee class="bg-contain size-full bg-base-200 cursor-pointer bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Anafaz1.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=4") }} data-phase="Telofaz 1" scrollee class="bg-contain size-full bg-base-200 cursor-pointer bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Telofaz1.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=5") }} data-phase="Sitokinez 1" scrollee class="bg-contain size-full bg-base-200 cursor-pointer bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Sitokinez1.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=6") }} data-phase="Profaz 2" scrollee class="bg-contain size-full bg-base-200 cursor-pointer bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Profaz2.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=7") }} data-phase="Metafaz 2" scrollee class="bg-contain size-full bg-base-200 cursor-pointer bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Metafaz2.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=8") }} data-phase="Anafaz 2" scrollee class="bg-contain size-full bg-base-200 cursor-pointer bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Anafaz2.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=9") }} data-phase="Telofaz 2" scrollee class="bg-contain size-full bg-base-200 cursor-pointer bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Telofaz2.png);"></div>
 					</svelte:fragment>
 				</CardIterator>
 			</div>
