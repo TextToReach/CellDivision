@@ -11,11 +11,33 @@
 		};
 	}
 
-	function IndexOfMinimum<T>(arr: T[]) { if (arr.length === 0) { throw new Error("Array is empty"); } let minIndex = 0; for (let i = 1; i < arr.length; i++) { if (arr[i] < arr[minIndex]) { minIndex = i; } } return minIndex; }
-	function IndexOfMaximum<T>(arr: T[]) { if (arr.length === 0) { throw new Error("Array is empty"); } let minIndex = 0; for (let i = 1; i < arr.length; i++) { if (arr[i] > arr[minIndex]) { minIndex = i; } } return minIndex; }
+	function IndexOfMinimum<T>(arr: T[]) {
+		if (arr.length === 0) {
+			throw new Error("Array is empty");
+		}
+		let minIndex = 0;
+		for (let i = 1; i < arr.length; i++) {
+			if (arr[i] < arr[minIndex]) {
+				minIndex = i;
+			}
+		}
+		return minIndex;
+	}
+	function IndexOfMaximum<T>(arr: T[]) {
+		if (arr.length === 0) {
+			throw new Error("Array is empty");
+		}
+		let minIndex = 0;
+		for (let i = 1; i < arr.length; i++) {
+			if (arr[i] > arr[minIndex]) {
+				minIndex = i;
+			}
+		}
+		return minIndex;
+	}
 
 	function isNull(object: unknown): object is null {
-		return object === null
+		return object === null;
 	}
 
 	function Convert<T>(e: any) {
@@ -29,6 +51,19 @@
 		}
 		return elements[IndexOfMinimum(entries)];
 	}
+
+	const ekip = [
+		{ 
+			name: "Hamza TEMEL",
+			description: "Merhaba ben Hamza. 8 yaşımda blok tabanlı programlama ile yazılıma başladım. Yaklaşık 6 yıldır web geliştirme ile ilgileniyorum. Javascript, Typescript, Rust, C/C++, C#, Go, Zig, Python dillerine hakimim. Orta düzeyde Linux (Arch) bilgim var.",
+			imgurl: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+		},
+		{ 
+			name: "Ege Demirbaş",
+			description: "",
+			imgurl: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+		},
+	];
 </script>
 
 <script lang="ts">
@@ -44,17 +79,17 @@
 	let canScroll = false;
 
 	$effect(() => {
-		const scrollable = document.querySelector("#container > main") as HTMLElement
+		const scrollable = document.querySelector("#container > main") as HTMLElement;
 
 		scrollable.addEventListener("wheel", (e) => {
-			const closestElement = document.elementFromPoint(e.clientX, e.clientY)
-			canScroll = (isNull(closestElement?.getAttribute("scrollable")) && isNull(closestElement?.getAttribute("scrollee")))
-			if(canScroll) e.preventDefault();
+			const closestElement = document.elementFromPoint(e.clientX, e.clientY);
+			canScroll = isNull(closestElement?.getAttribute("scrollable")) && isNull(closestElement?.getAttribute("scrollee"));
+			if (canScroll) e.preventDefault();
 		});
 		scrollable.addEventListener(
 			"wheel",
 			throttle((e: WheelEvent) => {
-				if(!canScroll) return;
+				if (!canScroll) return;
 				if (e.deltaY > scrollthreshold) {
 					scrollTo("next");
 				} else if (e.deltaY < -scrollthreshold) {
@@ -76,13 +111,15 @@
 
 <div id="container" class="flex flex-row">
 	<nav class="fixed left-0 top-0 z-[999] flex h-20 w-full justify-between bg-[#171717] px-4 desktop:px-40">
-		<div class="center flex select-none font-mono text-2xl font-bold text-white">BioP</div>
-		<div class="center flex gap-2">
+		<div class="flex select-none font-mono text-2xl font-bold text-white center">BioP</div>
+		<div class="flex gap-2 center mx-4">
 			<a href="/mitoz" class="btn hover:text-violet-700">Mitoz</a>
 			<a href="/mayoz" class="btn hover:text-violet-700">Mayoz</a>
-			<a href="/quizredirect" class="btn hover:text-violet-700">Quiz</a>
+			<a href="/quizredirect" class="btn hover:text-violet-700">Oyun</a>
+			<a href="/song" class="btn hover:text-violet-700">Şarkı</a>
+			<a href="/boxgame" class="btn hover:text-violet-700">Kutu Oyunu</a>
 		</div>
-		<div class="center hidden gap-2 desktop:flex">
+		<div class="hidden gap-2 center desktop:flex">
 			<div class="tooltip tooltip-bottom" data-tip="Hakkımızda">
 				<button class="btn hover:text-violet-700">
 					<Fa icon={faBook} class="hover:text-violet-700" />
@@ -96,96 +133,88 @@
 		</div>
 	</nav>
 
-	<main class="divide-y-2 divide-black overflow-y-scroll bg-base-300 scrollbar-hide">
-		<section class="flex flex-col justify-center items-center gap-4 desktop:gap-0 wide:gap-4 wide:py-16" id="field0">
-			<h1 scrollable class="text-center [word-spacing:9999px]">Hücre Bölünmesi</h1>
-			<div class="wide:flex wide:flex-row wide:justify-center desktop:gap-2 desktop:aspect-square wide:!aspect-auto w-full desktop:w-auto wide:w-full *:max-w-[280px] gap-4 inline-grid grid-cols-2" id="cardWrapper">
-
+	<main class="divide-y-2 divide-black overflow-y-scroll bg-base-300 scrollbar-hidden">
+		<section class="flex flex-col items-center justify-center gap-4 desktop:gap-0 wide:gap-4 wide:py-16" id="field0">
+			<h1 class="text-center [word-spacing:9999px]">Hücre Bölünmesi</h1>
+			<div class="inline-grid w-full grid-cols-2 gap-4 *:max-w-[280px] desktop:aspect-square desktop:w-auto desktop:gap-2 wide:flex wide:!aspect-auto wide:w-full wide:flex-row wide:justify-center" id="cardWrapper">
 				<Card Image="mitosis.jpg" To="/mitoz">
-					<h6 slot="description" class="select-none flex-1 mx-4 my-2 mobile:my-0">Mitoz</h6>
+					<h6 slot="description" class="mx-4 my-2 flex-1 select-none mobile:my-0">Mitoz</h6>
 				</Card>
-				<Card Image="meiosis.jpg" To="/mayoz">					
-					<h6 slot="description" class="select-none flex-1 mx-4 my-2 mobile:my-0">Mayoz</h6>
+				<Card Image="meiosis.jpg" To="/mayoz">
+					<h6 slot="description" class="mx-4 my-2 flex-1 select-none mobile:my-0">Mayoz</h6>
 				</Card>
 				<CardIterator unique="0" scrollable className="hidden desktop:block">
 					<svelte:fragment slot="elements">
-						<div onclick={() => {goto("/mitoz?tab=0")}} scrollee class="text-white text-center bg-red-700 size-full bg-no-repeat selam bg-center" 		data-image="cards/Mitoz_Interfaz.png">İnterfaz</div>
-						<div onclick={() => {goto("/mitoz?tab=1")}} scrollee class="text-white text-center bg-blue-700 size-full bg-no-repeat selam bg-center" 		data-image="cards/Mitoz_Profaz.png">Profaz</div>
-						<div onclick={() => {goto("/mitoz?tab=2")}} scrollee class="text-white text-center bg-green-700 size-full bg-no-repeat selam bg-center" 	data-image="cards/Mitoz_Metafaz.png">Metafaz</div>
-						<div onclick={() => {goto("/mitoz?tab=3")}} scrollee class="text-white text-center bg-yellow-400 size-full bg-no-repeat selam bg-center" 	data-image="cards/Mitoz_Anafaz.png">Anafaz</div>
-						<div onclick={() => {goto("/mitoz?tab=4")}} scrollee class="text-white text-center bg-purple-600 size-full bg-no-repeat selam bg-center" 	data-image="cards/Mitoz_Telofaz.png">Telofaz ve Sitokinez</div>
+						<div onclick={() => { goto("/mitoz?tab=0") }} scrollee class="bg-contain size-full bg-red-700 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Mitoz_Interfaz.png);"></div>
+						<div onclick={() => { goto("/mitoz?tab=1") }} scrollee class="bg-contain size-full bg-blue-700 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Mitoz_Profaz.png);"></div>
+						<div onclick={() => { goto("/mitoz?tab=2") }} scrollee class="bg-contain size-full bg-green-700 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Mitoz_Metafaz.png);"></div>
+						<div onclick={() => { goto("/mitoz?tab=3") }} scrollee class="bg-contain size-full bg-yellow-400 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Mitoz_Anafaz.png);"></div>
+						<div onclick={() => { goto("/mitoz?tab=4") }} scrollee class="bg-contain size-full bg-purple-600 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Mitoz_Telofaz.png);"></div>
 					</svelte:fragment>
 				</CardIterator>
 				<CardIterator unique="1" scrollable className="hidden desktop:block">
 					<svelte:fragment slot="elements">
-						<div onclick={() => {goto("/mayoz?tab=0")}} scrollee class="text-white text-center bg-red-700 size-full bg-no-repeat selam bg-center"		 	data-image="cards/Interfaz.png">İnterfaz</div>
-						<div onclick={() => {goto("/mayoz?tab=1")}} scrollee class="text-white text-center bg-blue-700 size-full bg-no-repeat selam bg-center"		data-image="cards/Profaz1.png">Profaz 1</div>
-						<div onclick={() => {goto("/mayoz?tab=2")}} scrollee class="text-white text-center bg-green-700 size-full bg-no-repeat selam bg-center"	 	data-image="cards/Metafaz1.png">Metafaz 1</div>
-						<div onclick={() => {goto("/mayoz?tab=3")}} scrollee class="text-white text-center bg-yellow-400 size-full bg-no-repeat selam bg-center"	data-image="cards/Anafaz1.png">Anafaz 1</div>
-						<div onclick={() => {goto("/mayoz?tab=4")}} scrollee class="text-white text-center bg-purple-600 size-full bg-no-repeat selam bg-center"	data-image="cards/Telofaz1.png">Telofaz 1</div>
-						<div onclick={() => {goto("/mayoz?tab=5")}} scrollee class="text-white text-center bg-orange-600 size-full bg-no-repeat selam bg-center"	data-image="cards/Sitokinez1.png">Sitokinez 1</div>
-						<div onclick={() => {goto("/mayoz?tab=6")}} scrollee class="text-white text-center bg-blue-700 size-full bg-no-repeat selam bg-center"		data-image="cards/Profaz2.png">Profaz 2</div>
-						<div onclick={() => {goto("/mayoz?tab=7")}} scrollee class="text-white text-center bg-green-700 size-full bg-no-repeat selam bg-center"	 	data-image="cards/Metafaz2.png">Metafaz 2</div>
-						<div onclick={() => {goto("/mayoz?tab=8")}} scrollee class="text-white text-center bg-yellow-400 size-full bg-no-repeat selam bg-center"	data-image="cards/Anafaz2.png">Anafaz 2</div>
-						<div onclick={() => {goto("/mayoz?tab=9")}} scrollee class="text-white text-center bg-purple-600 size-full bg-no-repeat selam bg-center"	data-image="cards/Telofaz2.png">Telofaz 2</div>
+						<div onclick={() => { goto("/mayoz?tab=0") }} scrollee class="bg-contain size-full bg-red-700 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Interfaz.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=1") }} scrollee class="bg-contain size-full bg-blue-700 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Profaz1.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=2") }} scrollee class="bg-contain size-full bg-green-700 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Metafaz1.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=3") }} scrollee class="bg-contain size-full bg-yellow-400 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Anafaz1.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=4") }} scrollee class="bg-contain size-full bg-purple-600 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Telofaz1.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=5") }} scrollee class="bg-contain size-full bg-orange-600 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Sitokinez1.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=6") }} scrollee class="bg-contain size-full bg-blue-700 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Profaz2.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=7") }} scrollee class="bg-contain size-full bg-green-700 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Metafaz2.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=8") }} scrollee class="bg-contain size-full bg-yellow-400 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Anafaz2.png);"></div>
+						<div onclick={() => { goto("/mayoz?tab=9") }} scrollee class="bg-contain size-full bg-purple-600 bg-center bg-no-repeat text-center text-white" style="background-image: url(cards/Telofaz2.png);"></div>
 					</svelte:fragment>
 				</CardIterator>
-				
-
 			</div>
 		</section>
-		<section class="center flex flex-col gap-2" id="field1">
-			<div class="flex-grow-[1.1] flex justify-center items-center text-center desktop:block desktop:flex-grow-0">
+		<section class="flex flex-col gap-2 center" id="field1">
+			<div class="flex flex-grow-[1.1] items-center justify-center text-center desktop:block desktop:flex-grow-0">
 				<h1>Proje Amacımız</h1>
 			</div>
-			<div class="flex-grow desktop:flex-grow-0 desktop:flex desktop:items-start desktop:mx-32">
-				<h2 class="mx-2 text-sm desktop:text-base font-sans">
-					Son yıllarda artırılmış gerçeklik uygulamalarının eğitimde öğrencilerin öğrenme süreçlerini, motivasyonlarını ve kalıcı öğrenmeyi olumlu etkilediği tespit edilmiştir. Bu çalışmada, artırılmış gerçeklik teknolojisinin ortaöğretim 10. sınıf biyoloji dersinde mitoz ve mayoz bölünme konusundaki
-					akademik başarıya etkisi incelenmiştir. Literatürde bu alanda yeterli çalışma olmadığı ve öğrencilerin soyut kavramlar nedeniyle zorlandığı belirtilmiştir. Artırılmış gerçeklik sayesinde soyut kavramların somutlaştırılması, konunun görsel ve dikkat çekici şekilde sunulması hedeflenmiştir.
-					Tasarlanan uygulama, literatürdeki boşluğu doldurmayı ve biyoloji eğitiminde artırılmış gerçeklik kullanımını yaygınlaştırmayı amaçlamaktadır. Ayrıca, konunun web sitesi üzerinden zamandan ve mekandan bağımsız olarak erişilebilir olması, eğlenceli öğrenme süreçleri sunması ve oyunlarla
-					pekiştirilmesi gibi avantajlar sağlanmaktadır.
+			<div class="flex-grow desktop:mx-32 desktop:flex desktop:flex-grow-0 desktop:items-start">
+				<h2 class="mx-2 font-sans text-sm desktop:text-base">
+					Son yıllarda artırılmış gerçeklik uygulamalarının eğitimde öğrencilerin öğrenme süreçlerini, motivasyonlarını ve kalıcı öğrenmeyi olumlu etkilediği tespit edilmiştir. Bu çalışmada, artırılmış gerçeklik teknolojisinin ortaöğretim 10. sınıf biyoloji dersinde mitoz ve mayoz bölünme
+					konusundaki akademik başarıya etkisi incelenmiştir. Literatürde bu alanda yeterli çalışma olmadığı ve öğrencilerin soyut kavramlar nedeniyle zorlandığı belirtilmiştir. Artırılmış gerçeklik sayesinde soyut kavramların somutlaştırılması, konunun görsel ve dikkat çekici şekilde sunulması
+					hedeflenmiştir. Tasarlanan uygulama, literatürdeki boşluğu doldurmayı ve biyoloji eğitiminde artırılmış gerçeklik kullanımını yaygınlaştırmayı amaçlamaktadır. Ayrıca, konunun web sitesi üzerinden zamandan ve mekandan bağımsız olarak erişilebilir olması, eğlenceli öğrenme süreçleri sunması
+					ve oyunlarla pekiştirilmesi gibi avantajlar sağlanmaktadır.
 				</h2>
 			</div>
 		</section>
-		<section class="flex flex-col items-center justify-center gap-4" id="field2">
-			<h1>Proje Ekibimiz</h1>
-			<div class="flex w-full justify-around gap-8 desktop:w-.5">
-				<div class="flex flex-col">
-					<div class="avatar">
-						<div class="w-24 rounded-full">
-							<img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+		<section class="flex flex-col items-center *:flex-1" id="field2">
+			<div class="flex w-max h-full flex-col items-center justify-center gap-4">
+				<h1 class="w-screen desktop:w-max">Proje Ekibimiz</h1>
+				<div class="divider divider-vertical"></div>
+				<div id="ekip" class="flex w-full justify-around gap-x-16 gap-y-4">
+					{#each ekip as member, index}
+						<div class="flex flex-col">
+							<div class="avatar flex flex-col items-center">
+								<button class="w-24 rounded-full" onclick={() => (document.getElementById(`member_modal_${index}`) as HTMLDialogElement).showModal()}>
+									<img class="rounded-full" src={member.imgurl} />
+								</button>
+								<dialog id={`member_modal_${index}`} class="modal">
+									<div class="modal-box">
+										<h3 class="text-lg font-bold">Merhaba! Ben {member.name}</h3>
+										<p class="py-4">{member.description}</p>
+										<div class="modal-action">
+											<form method="dialog">
+												<button class="btn">Kapat</button>
+											</form>
+										</div>
+									</div>
+								</dialog>
+							</div>
+							<h4 class="text-center whitespace-nowrap">{member.name}</h4>
 						</div>
-					</div>
-					<h1 class="text-center">...</h1>
-				</div>
-				<div class="flex flex-col">
-					<div class="avatar">
-						<div class="w-24 rounded-full">
-							<img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-						</div>
-					</div>
-					<h1 class="text-center">...</h1>
-				</div>
-				<div class="flex flex-col">
-					<div class="avatar">
-						<div class="w-24 rounded-full">
-							<img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-						</div>
-					</div>
-					<h1 class="text-center">...</h1>
+					{/each}
 				</div>
 			</div>
 		</section>
-		<section class="flex flex-col items-center justify-center" id="field3">
-			<h1>E kitaplık</h1>
-		</section>
+		
 	</main>
 </div>
 
-<style lang="scss">	
-	.selam {
-		background-size: contain;
-	}
+<style lang="scss">
 
 	main {
 		height: calc(100dvh - 5rem);
@@ -199,35 +228,7 @@
 	section {
 		max-height: calc(100dvh - 5rem) !important;
 		min-height: calc(100dvh - 5rem) !important;
-		scroll-snap-align: center; 
+		scroll-snap-align: center;
 		box-sizing: border-box;
-	}
-
-	:is(h1, h2, h3, h4, h5, h6) {
-		@apply -:my-8 flex items-center justify-center font-mono;
-	}
-
-	h1 {
-		@apply text-5xl mobile:text-7xl;
-	}
-
-	h2 {
-		@apply text-4xl mobile:text-6xl;
-	}
-
-	h3 {
-		@apply text-3xl mobile:text-5xl;
-	}
-
-	h4 {
-		@apply text-2xl mobile:text-4xl;
-	}
-
-	h5 {
-		@apply text-xl mobile:text-3xl;
-	}
-
-	h6 {
-		@apply text-lg mobile:text-2xl;
 	}
 </style>

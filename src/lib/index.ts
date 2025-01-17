@@ -54,10 +54,6 @@ export namespace STD {
 		}
 	}
 }
-
-export function cx(...strings: string[]) {
-	return [...strings.filter(e => e != "")].join(" ")
-}
 export function isNumeric(n: string) {
 	//@ts-ignore
 	return !isNaN(parseFloat(n)) && isFinite(n);

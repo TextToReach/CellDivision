@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
-	import { cx } from "$lib";
+	import { cn } from "./utils";
 
-	const { unique, className, ...properties } = $props();
+	const { unique, className = "", ...properties } = $props();
 	const SECONDSBEFOREAUTOSCROLL = 3;
 	const AUTOSCROLLINTERVALDURATION = 1.5;
 	let containerDiv: HTMLDivElement;
@@ -40,8 +40,8 @@
 <div
 	{...properties}
 	unique={unique}
-	class={cx(
-		"CardIterator box-border *:relative hover: mx-auto h-[16rem] w-full max-w-96 border-4 border-solid border-transparent -:rounded-[1rem] bg-base-100 transition-all duration-300 hover:border-violet-700 scrollbar-hide desktop:mx-0",
+	class={cn(
+		"CardIterator box-border *:relative hover: mx-auto h-[16rem] w-full max-w-96 border-4 border-solid border-transparent -:rounded-[1rem] bg-base-100 transition-all duration-300 hover:border-violet-700 scrollbar-hidden desktop:mx-0",
 		className
 	)}
 	onscroll={() => {
