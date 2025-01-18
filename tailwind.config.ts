@@ -3,6 +3,7 @@ import plugin from 'tailwindcss/plugin';
 import DaisyUI from "daisyui";
 import Unimportant from "tailwindcss-unimportant";
 import typography from '@tailwindcss/typography'
+import colors from "tailwindcss/colors"
 
 
 export default {
@@ -23,7 +24,8 @@ export default {
           '800': '#964516',
           '900': '#793a15',
           '950': '#411c09'
-        }
+        },
+				sa: colors.indigo
       },
 			fontFamily: {
 				"inter": ["Inter", "mono"],
