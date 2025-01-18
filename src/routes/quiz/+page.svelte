@@ -23,7 +23,7 @@
 			CorrectAnswer: "C",
 			Options: { A: "2", B: "4", C: "8", D: "16" },
 			Image:
-				"https://media.istockphoto.com/id/1412962552/tr/foto%C4%9Fraf/a-cell-during-anaphase-astral-microtubules-generate-forces-that-stretch-the-cell-into-an.jpg?s=612x612&w=0&k=20&c=Ro-aLi7inkgx3KNTiEV6jdrUiPgBuToj90oDpwy6JD4="
+				"/cards/Mitoz_Interfaz.png"
 		},
 		{ // 2
 			Quote: "Görseldeki hücre mitozun hangi evresini göstermektedir?",
@@ -84,13 +84,20 @@
 			}
 		},
 		{ // 9
-			Quote: "Partenogenez ile üreyen aşağıdaki arılardan hangisi n kromozoma sahiptir?",
+			Quote:
+`Ayşe arkadaşı Ali’ye mayoz bölünmenin özelliklerini anlatırken önündeki deftere şunları yazıyor:
+	I. Bölünme başlamadan önce DNA eşlenir.
+	II. Profaz evresinde tetratlar oluşur.
+	III. Anafaz evresinde homolog kromozomlar ayrılır.
+	IV. Metafaz evresinde kromozomlar tek sıra hâlinde hücrenin ekvatoral düzleminde dizilir.
+Ayşe bu özelliklerden hangilerinin mitoz bölünmede de görüldüğünü söyleyecektir?
+`,
 			CorrectAnswer: "B",
 			Options: {
-				A: "İşçi arı",
-				B: "Erkek arı",
-				C: "Kraliçe arı",
-				D: "Asker arı"
+				A: "2 ve 3",
+				B: "1 ve 4",
+				C: "1 ve 3",
+				D: "3 ve 4"
 			}
 		},
 		{ // 10
