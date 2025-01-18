@@ -12,8 +12,8 @@
 	let index: number = $state(1 / 4);
 	let src = $state("");
 	let faz = $state("");
-	let playing = $state(false);
-	let sound: Howl;
+	let sound: Howl = $state(new Howl({src:[""]}));
+	let playing = $state(false)
 	let drawerVisible = $state(false);
 
 	async function getYaml(): Promise<string> {
@@ -25,14 +25,7 @@
 
 		if (!(faz.replaceAll("İ", "I").split(" ")[0] == "Sitokinez") && !!faz){
 			sound = new Howl({
-				src: [`/audio/mayozses/${faz.replaceAll("İ", "I")}.m4a`],
-				onpause: () => {
-					playing = false;
-				},
-				
-				onplay: () => {
-					playing = true;
-				}
+				src: [`/audio/mayozses/${faz.replaceAll("İ", "I")}.m4a`]
 			});
 		}
 		const params = new URLSearchParams(window.location.search);
@@ -43,15 +36,22 @@
 		src = keys.at(index % keys.length)!;
 		faz = String(src.split("/").at(-1)?.split(".")[1]).replaceAll("_", " ");
 	});
+	
+	function play(){
+		if(sound) sound.play();
+		playing = true
+	}
+	function pause(){
+		if(sound) sound.stop();
+		playing = false
+	}
 
-	$effect(() => {
-		if (!sound) return;
-		if (playing) {
-			sound.play();
-		} else {
-			sound.pause();
-		}
-	});
+	function togglePlaying(){
+		if(sound.playing()) sound.stop();
+		else sound.play();
+
+		playing = sound.playing();
+	}
 
 	$effect.pre(() => {
 		if (index != 1 / 4) {
@@ -70,6 +70,7 @@
 				class="btn h-16 w-16"
 				onclick={() => {
 					index--;
+					pause()
 				}}
 			>
 				<Fa size={"lg"} icon={faAngleDoubleLeft} />
@@ -81,6 +82,7 @@
 				class="btn h-16 w-16"
 				onclick={() => {
 					index++;
+					pause()
 				}}
 			>
 				<Fa size={"lg"} icon={faAngleDoubleRight} />
@@ -105,8 +107,14 @@
 					<h4 class="flex-1">{faz.replaceAll("İ", "I")}</h4>
 					<div class="divider divider-horizontal"></div>
 					<button onclick={() => {
-						if(!(faz.replaceAll("İ", "I").split(" ")[0] == "Sitokinez")) {playing = !playing}
-					}}><Fa class="aspect-square h-full rounded-md bg-magnum-600 p-1 text-black transition-transform" icon={(faz.replaceAll("İ", "I").split(" ")[0] == "Sitokinez")? faTimes:(playing ? faPause : faPlay)} /></button>
+						if(!(faz.replaceAll("İ", "I").split(" ")[0] == "Sitokinez")) {
+							togglePlaying()
+						}
+					}}>
+						{#key playing}
+							<Fa class="aspect-square h-full rounded-md bg-magnum-600 p-1 text-black transition-transform" icon={(faz.replaceAll("İ", "I").split(" ")[0] == "Sitokinez")? faTimes:(!!sound && sound.playing() ? faPause : faPlay)} />
+						{/key}
+					</button>
 				</div>
 				<div class="divider divider-vertical"></div>
 				{#key index}
