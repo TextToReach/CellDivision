@@ -25,7 +25,7 @@
 
 		if (!(faz.replaceAll("İ", "I").split(" ")[0] == "Sitokinez") && !!faz){
 			sound = new Howl({
-				src: [`/audio/mayozses/${faz.replaceAll("İ", "I")}.m4a`]
+				src: [`/audio/mayozses/${faz.replaceAll("İ", "I")}.m4a`],
 			});
 		}
 		const params = new URLSearchParams(window.location.search);
