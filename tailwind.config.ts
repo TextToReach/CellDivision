@@ -12,51 +12,50 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-        magnum: {
-          '50': '#fff9ed',
-          '100': '#fef2d6',
-          '200': '#fce0ac',
-          '300': '#f9c978',
-          '400': '#f7b155',
-          '500': '#f38d1c',
-          '600': '#e47312',
-          '700': '#bd5711',
-          '800': '#964516',
-          '900': '#793a15',
-          '950': '#411c09'
-        },
-				sa: colors.indigo
-      },
+				magnum: {
+					'50': '#fff9ed',
+					'100': '#fef2d6',
+					'200': '#fce0ac',
+					'300': '#f9c978',
+					'400': '#f7b155',
+					'500': '#f38d1c',
+					'600': '#e47312',
+					'700': '#bd5711',
+					'800': '#964516',
+					'900': '#793a15',
+					'950': '#411c09'
+				},
+			},
 			fontFamily: {
 				"inter": ["Inter", "mono"],
 				"lato": ["Lato", "mono"],
 				"merri": ["Merriweather", "mono"],
 				sans: [
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Segoe UI',
-          'Roboto',
-          'Oxygen',
-          'Ubuntu',
-          'Cantarell',
-          'Fira Sans',
-          'Droid Sans',
-          'Helvetica Neue',
-          'Arial',
-          'sans-serif',
-          'Apple Color Emoji',
-          'Segoe UI Emoji',
-          'Segoe UI Symbol'
-        ],
-        mono: [
-          'ui-monospace',
-          'SFMono-Regular',
-          'SF Mono',
-          'Menlo',
-          'Consolas',
-          'Liberation Mono',
-          'monospace'
-        ]
+					'-apple-system',
+					'BlinkMacSystemFont',
+					'Segoe UI',
+					'Roboto',
+					'Oxygen',
+					'Ubuntu',
+					'Cantarell',
+					'Fira Sans',
+					'Droid Sans',
+					'Helvetica Neue',
+					'Arial',
+					'sans-serif',
+					'Apple Color Emoji',
+					'Segoe UI Emoji',
+					'Segoe UI Symbol'
+				],
+				mono: [
+					'ui-monospace',
+					'SFMono-Regular',
+					'SF Mono',
+					'Menlo',
+					'Consolas',
+					'Liberation Mono',
+					'monospace'
+				]
 			},
 			spacing: {
 				".1": "10%",
@@ -125,18 +124,18 @@ export default {
 			)
 		}),
 		plugin(function ({ addVariant, matchUtilities, theme }) {
-      addVariant('hocus', ['&:hover', '&:focus'])
-      // Square utility
-      matchUtilities(
-        {
-          square: (value) => ({
-            width: value,
-            height: value
-          })
-        },
-        { values: theme('spacing') }
-      )
-    })
+			addVariant('hocus', ['&:hover', '&:focus'])
+			// Square utility
+			matchUtilities(
+				{
+					square: (value) => ({
+						width: value,
+						height: value
+					})
+				},
+				{ values: theme('spacing') }
+			)
+		})
 	],
 	safelist: [
 		"border-red-500",

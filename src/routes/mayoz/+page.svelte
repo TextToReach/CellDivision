@@ -31,7 +31,6 @@
 		const params = new URLSearchParams(window.location.search);
 		if (params.get("tab") && isNumeric(params.get("tab") ?? "") && index === 1 / 4) {
 			index = Number(params.get("tab"));
-			if (index > 1) index++;
 		}
 		src = keys.at(index % keys.length)!;
 		faz = String(src.split("/").at(-1)?.split(".")[1]).replaceAll("_", " ");

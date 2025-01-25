@@ -23,7 +23,7 @@
 	<div class="container m-16">
 
 		<div class="boxcard p-1" style="grid-column: span 3;">
-			<div class="boxcardchild whitespace-pre-line border-b-2 border-white border-solid">
+			<div class="boxcardchild whitespace-pre-line border-b-2 border-[whitesmoke] border-solid pb-4">
 				Oyunun Kuralları:
 					1.	Oyun en az 2 en fazla 4 kişi arasında oynanır.
 					2.	Oyun 48 kağıttan oluşur.
