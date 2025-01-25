@@ -116,6 +116,7 @@
 	};
 </script>
 
+<svelte:head><title>Hücre Bölünmesi - Ana Sayfa</title></svelte:head>
 <div id="container" class="flex flex-row">
 	<nav class="fixed left-0 top-0 z-[999] flex *:flex-1x h-20 w-full justify-center bg-[#171717] px-4 wide:px-40">
 		<div class="select-none font-mono text-2xl font-bold text-white center hidden desktop:flex mr-8">BioP</div>
