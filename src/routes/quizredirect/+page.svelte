@@ -2,7 +2,8 @@
 	import { faStopwatch } from "@fortawesome/free-solid-svg-icons";
 	import Fa from "svelte-fa";
 </script>
-	
+
+<svelte:head><title>Hücre Bölünmesi - Oyun</title></svelte:head>
 <div id="wrapper" class="center flex size-full">
 	<div class="flex flex-col items-center gap-4 rounded-lg bg-base-300 p-8">
 		<h1 class="text-3xl">Konu Tarama Testi</h1>

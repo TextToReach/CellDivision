@@ -125,6 +125,7 @@ Olaylarından hangilerinin gerçekleştiği kesindir?
 	}, 500);
 </script>
 
+<svelte:head><title>Hücre Bölünmesi - Oyun</title></svelte:head>
 <div class="center flex size-full overflow-hidden">
 	<main class="flex h-full w-full justify-center bg-black p-4">
 		{#key index}

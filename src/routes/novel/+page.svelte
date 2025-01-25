@@ -22,6 +22,7 @@
 	];
 </script>
 
+<svelte:head><title>Hücre Bölünmesi - Karikatür</title></svelte:head>
 <div class="flex flex-col-reverse items-center h-screen">
 
 	<div use:melt={$list} class="flex justify-center fixed bottom-0 w-full rounded-t-xl bg-base-300 overflow-hidden">

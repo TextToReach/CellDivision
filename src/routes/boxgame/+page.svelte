@@ -18,6 +18,7 @@
 	];
 </script>
 
+<svelte:head><title>Hücre Bölünmesi - Kutu Oyunu</title></svelte:head>
 <div class="scrollbar-hidden flex size-full justify-center overflow-y-scroll">
 	<div class="container m-16">
 
