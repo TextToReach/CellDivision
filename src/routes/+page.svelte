@@ -79,9 +79,9 @@
 	const scrollthreshold = 20;
 	let canScroll = false;
 
-  const {
-    elements: { menu, item, trigger, arrow }
-  } = createDropdownMenu({
+	const {
+		elements: { menu, item, trigger, arrow }
+	} = createDropdownMenu({
 		
 	})
 
@@ -117,24 +117,27 @@
 </script>
 
 <svelte:head><title>Hücre Bölünmesi - Ana Sayfa</title></svelte:head>
+
 <div id="container" class="flex flex-row">
-	<nav class="fixed left-0 top-0 z-[999] flex *:flex-1x h-20 w-full justify-center bg-[#171717] px-4 wide:px-40">
-		<div class="select-none font-mono text-2xl font-bold text-white center hidden desktop:flex mr-8">BioP</div>
-		<div class="flex gap-2 center mx-4">
+	<nav class="fixed left-0 top-0 z-[999] flex *:flex-1x h-20 w-full center bg-[#171717] px-4 wide:px-40">
+		<div class="select-none font-mono text-2xl font-bold text-white center hidden desktop:flex">Hücre Bölünmesi</div>
+		<div class="divider divider-horizontal h-.5 my-auto hidden desktop:flex"></div>
+		<div class="flex gap-2 center">
 			<a href="/mitoz" class="btn hover:text-violet-700">Mitoz</a>
 			<a href="/mayoz" class="btn hover:text-violet-700">Mayoz</a>
 
+			
 			<button use:melt={$trigger} class="btn hover:text-violet-700">Materyal</button>
 			<div use:melt={$menu} class="flex flex-col z-[1000] bg-base-200 p-2 rounded-xl">
 				<a href="/quizredirect" class="hover:text-violet-700">Oyun</a>
-				<div class="divider divider-vertical !m-0"></div>
+				<div class="divider divider-vertical !m-0 desktop:hidden"></div>
 				<a href="/song" class="hover:text-violet-700">Şarkı</a>
-				<div class="divider divider-vertical !m-0"></div>
+				<div class="divider divider-vertical !m-0 desktop:hidden"></div>
 				<a href="/boxgame" class="hover:text-violet-700 gap-1">Kutu Oyunu (MAMİ)</a>
-				<div class="divider divider-vertical !m-0"></div>
+				<div class="divider divider-vertical !m-0 desktop:hidden"></div>
 				<a href="/novel" class="hover:text-violet-700">Çizgi Roman</a>
 			</div>
-
+			
 		</div>
 	</nav>
 

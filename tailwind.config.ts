@@ -5,6 +5,12 @@ import Unimportant from "tailwindcss-unimportant";
 import typography from '@tailwindcss/typography'
 import colors from "tailwindcss/colors"
 
+export const screens = {
+	"narrow": "390px",
+	"desktop": "744px",
+	"mobile": "416px",
+	"wide": "1032px"
+}
 
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -75,12 +81,7 @@ export default {
 				"100": "25rem",
 			}
 		},
-		screens: {
-			"narrow": "390px",
-			"desktop": "744px",
-			"mobile": "416px",
-			"wide": "1032px"
-		},
+		screens,
 	},
 
 	daisyui: {
