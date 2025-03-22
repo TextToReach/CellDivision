@@ -183,11 +183,7 @@
 			<div class="flex-grow desktop:mx-32 desktop:flex desktop:flex-grow-0 desktop:items-start">
 				<h2 class="mx-2 font-sans text-sm desktop:text-base">
 					Son yıllarda artırılmış gerçeklik uygulamalarının eğitimde öğrencilerin öğrenme süreçlerini, motivasyonlarını ve kalıcı öğrenmeyi olumlu etkilediği tespit edilmiştir. Bu çalışmada, artırılmış gerçeklik teknolojisinin ortaöğretim 10. sınıf biyoloji dersinde mitoz ve mayoz bölünme konusundaki akademik başarıya etkisi incelenmiştir. Literatürde bu alanda yeterli çalışma olmadığı ve öğrencilerin soyut kavramlar nedeniyle zorlandığı belirtilmiştir. Artırılmış gerçeklik sayesinde soyut kavramların somutlaştırılması, konunun görsel ve dikkat çekici şekilde sunulması hedeflenmiştir. Tasarlanan uygulama, literatürdeki boşluğu doldurmayı ve biyoloji eğitiminde artırılmış gerçeklik kullanımını yaygınlaştırmayı amaçlamaktadır. Ayrıca, konunun web sitesi üzerinden zamandan ve mekandan bağımsız olarak erişilebilir olması, eğlenceli öğrenme süreçleri sunması ve oyunlarla pekiştirilmesi gibi avantajlar sağlanmaktadır.
-					<br />
-					<br />
-					<strong class="contents">
-						Bu site 2204-A Lise Öğrencileri Araştırma Projeleri Yarışması için hazırlanan biyoloji alanı kapsamında kurulmuştur.
-					</strong>
+					
 				</h2>
 			</div>
 		</section>
