@@ -178,7 +178,7 @@
 		</section>
 		<section class="flex flex-col gap-2 center" id="field1">
 			<div class="flex flex-grow-[1.1] items-center justify-center text-center desktop:block desktop:flex-grow-0">
-				<h1>Proje Amacımızz</h1>
+				<h1>Proje Amacımız</h1>
 			</div>
 			<div class="flex-grow desktop:mx-32 desktop:flex desktop:flex-grow-0 desktop:items-start">
 				<h2 class="mx-2 font-sans text-sm desktop:text-base">
@@ -189,7 +189,7 @@
 		</section>
 		<section class="flex flex-col items-center *:flex-1" id="field2">
 			<div class="flex w-max h-full flex-col items-center justify-center gap-4">
-				<h1 class="w-screen desktop:w-max">Proje Ekibimiz</h1>
+				<h1 class="w-screen desktop:w-max items-center justify-center text-center">Proje Ekibimiz</h1>
 				<div class="divider divider-vertical"></div>
 				<div id="ekip" class="flex w-full justify-around gap-x-16 gap-y-4">
 					{#each ekip as member, index}
