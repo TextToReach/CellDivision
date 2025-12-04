@@ -178,7 +178,7 @@
 		</section>
 		<section class="flex flex-col gap-2 center" id="field1">
 			<div class="flex flex-grow-[1.1] items-center justify-center text-center desktop:block desktop:flex-grow-0">
-				<h1>Proje Amacımız</h1>
+				<h1>Proje Amacımızz</h1>
 			</div>
 			<div class="flex-grow desktop:mx-32 desktop:flex desktop:flex-grow-0 desktop:items-start">
 				<h2 class="mx-2 font-sans text-sm desktop:text-base">
