@@ -191,7 +191,7 @@
 			<div class="flex w-max h-full flex-col items-center justify-center gap-4">
 				<h1 class="w-screen desktop:w-max items-center justify-center text-center">Proje Ekibimiz</h1>
 				<div class="divider divider-vertical"></div>
-				<div id="ekip" class="flex w-full justify-around gap-x-16 gap-y-4">
+				<div id="ekip" class="flex w-full justify-around gap-x-16 gap-y-4 flex-col desktop:flex-col">
 					{#each ekip as member, index}
 						<div class="flex flex-col">
 							<div class="avatar flex flex-col items-center">
