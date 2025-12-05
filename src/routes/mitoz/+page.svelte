@@ -62,7 +62,7 @@
 <svelte:head><title>Hücre Bölünmesi - Mitoz Bölünme</title></svelte:head>
 <div class="flex size-full">
 	<div class="flex size-full flex-col bg-black">
-		<model-viewer {src} class="w-full flex-1" ar camera-controls disable-tap interaction-prompt={false} renderMode="performance">
+		<model-viewer {src} class="w-full flex-1" auto-rotate ar camera-controls disable-tap interaction-prompt={false} renderMode="performance">
 			<div id="" slot="progress-bar"></div>
 		</model-viewer>
 		<div class="relative bottom-0 flex w-full justify-between gap-8 p-4">
