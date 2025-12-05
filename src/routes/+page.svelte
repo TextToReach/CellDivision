@@ -143,7 +143,10 @@
 
 	<main class="divide-y-2 divide-black overflow-y-scroll bg-base-300 scrollbar-hidden">
 		<section class="flex flex-col items-center justify-center gap-4 desktop:gap-0 wide:gap-4 wide:py-16" id="field0">
-			<h1 class="text-center [word-spacing:9999px]">Hücre Bölünmesi</h1>
+			<h1 class="text-center">
+				AR-GE BÖL <br>
+				Artırılmış Gerçeklik & Yapay Zeka
+			</h1>
 			<div class="inline-grid w-full narrow:grid-cols-2 gap-4 *:max-w-[280px] desktop:aspect-square desktop:w-auto desktop:gap-2 wide:flex wide:!aspect-auto wide:w-full wide:flex-row wide:justify-center" id="cardWrapper">
 				<Card Image="mitosis.jpg" To="/mitoz">
 					<h6 slot="description" class="mx-4 my-2 flex-1 select-none mobile:my-0">Mitoz</h6>

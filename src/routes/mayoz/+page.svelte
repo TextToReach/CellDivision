@@ -62,7 +62,7 @@
 <svelte:head><title>Hücre Bölünmesi - Mayoz Bölünme</title></svelte:head>
 <div class="flex size-full">
 	<div class="flex size-full flex-col bg-black">
-		<model-viewer {src} class="w-full flex-1" ar auto-rotate rotation-per-second="pi/16" ar-modes="scene-viewer quick-look" camera-controls disable-tap interaction-prompt={false} renderMode="quality">
+		<model-viewer {src} class="w-full flex-1" ar auto-rotate ar-modes="scene-viewer quick-look" camera-controls disable-tap interaction-prompt={false} renderMode="quality">
 			<div id="" slot="progress-bar"></div>
 		</model-viewer>
 		<div class="relative bottom-0 flex w-full justify-between gap-8 p-4">
