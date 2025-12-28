@@ -55,12 +55,12 @@
 	const ekip = [
 		{ 
 			name: "Hamza TEMEL",
-			description: "Merhaba ben Hamza. 8 yaşımda blok tabanlı programlama ile yazılıma başladım. Yaklaşık 6 yıldır web geliştirme ile ilgileniyorum. Javascript/Typescript, Rust, C/C++, C#, Go, Zig, Python, Java yazılım dillerini biliyorum. Css ve Tailwindcss bilgim var. Orta düzeyde Linux (Arch) bilgim var. İlişkisel veri tabanlarına (SQL) hakimim. React, Svelte, Vue.JS Javascript frameworklerine hakimim. Blender programını kullanabiliyorum. Godot (C#) ve Unity oyun motorlarına hakimim.",
+			description: "Merhaba ben Hamza. 8 yaşımda blok tabanlı programlama ile yazılıma başladım. Yaklaşık 6 yıldır web geliştirme ile ilgileniyorum. Javascript/Typescript, Rust, C/C++, C#, Go, Zig, Python, Java yazılım dillerini biliyorum. Css ve Tailwindcss bilgim var. Orta düzeyde Linux (Arch) bilgim var. İlişkisel veri tabanlarına (SQL) hakimim. React, Svelte, Vue.JS Javascript frameworklerine hakimim. Blender programını kullanabiliyorum. Godot (C#) ve Unity oyun motorlarına hakimim. Giresun Fen Lisesi'nde 11. sınıf öğrencisi olarak eğitimime devam etmekteyim.",
 			imgurl: "/material/Avatar_Hamza.png"
 		},
 		{ 
 			name: "Ege Demirbaş",
-			description: "Merhaba Ben Ege Demirbaş, 15 yaşında teknoloji tutkusuyla dolu bir öğrenciyim. Giresun Fen Lisesi'nde 10. sınıfta eğitimimi sürdürürken, bilgisayarlar ve yapay zeka teknolojisine olan ilgimle her gün kendimi geliştirmekten büyük keyif alıyorum. Bilgisayar ekranlarının ardındaki dünya benim için adeta bir oyun alanı; her yeni kod, her yeni keşif beni daha da motive ediyor.",
+			description: "Merhaba Ben Ege Demirbaş, 15 yaşında teknoloji tutkusuyla dolu bir öğrenciyim. Giresun Fen Lisesi'nde 11. sınıfta eğitimimi sürdürürken, bilgisayarlar ve yapay zeka teknolojisine olan ilgimle her gün kendimi geliştirmekten büyük keyif alıyorum. Bilgisayar ekranlarının ardındaki dünya benim için adeta bir oyun alanı; her yeni kod, her yeni keşif beni daha da motive ediyor.",
 			imgurl: "/material/Avatar_Ege.jpg"
 		},
 	];
@@ -185,8 +185,9 @@
 			</div>
 			<div class="flex-grow desktop:mx-32 desktop:flex desktop:flex-grow-0 desktop:items-start">
 				<h2 class="mx-2 font-sans text-sm desktop:text-base">
-					Son yıllarda artırılmış gerçeklik uygulamalarının eğitimde öğrencilerin öğrenme süreçlerini, motivasyonlarını ve kalıcı öğrenmeyi olumlu etkilediği tespit edilmiştir. Bu çalışmada, artırılmış gerçeklik teknolojisinin ortaöğretim 10. sınıf biyoloji dersinde mitoz ve mayoz bölünme konusundaki akademik başarıya etkisi incelenmiştir. Literatürde bu alanda yeterli çalışma olmadığı ve öğrencilerin soyut kavramlar nedeniyle zorlandığı belirtilmiştir. Artırılmış gerçeklik sayesinde soyut kavramların somutlaştırılması, konunun görsel ve dikkat çekici şekilde sunulması hedeflenmiştir. Tasarlanan uygulama, literatürdeki boşluğu doldurmayı ve biyoloji eğitiminde artırılmış gerçeklik kullanımını yaygınlaştırmayı amaçlamaktadır. Ayrıca, konunun web sitesi üzerinden zamandan ve mekandan bağımsız olarak erişilebilir olması, eğlenceli öğrenme süreçleri sunması ve oyunlarla pekiştirilmesi gibi avantajlar sağlanmaktadır.
-					
+					Son yıllarda eğitim alanında artırılmış gerçeklik (AG) uygulamalarının kullanımı giderek artmakta; bu teknolojinin öğrencilerin öğrenme süreçleri, derse yönelik motivasyonları, tutumları ve kalıcı öğrenmeleri üzerinde olumlu etkiler oluşturduğu çeşitli araştırmalarda ortaya konulmaktadır. Bu çalışmanın amacı, tarafımızca geliştirilen artırılmış gerçeklik destekli özgün bir öğretim uygulamasının, ortaöğretim 10. sınıf öğrencilerinin biyoloji dersinin temel konularından biri olan hücre bölünmesi konusundaki akademik başarıları ile biyoloji dersine yönelik tutumları üzerindeki etkisini incelemektir. AG uygulamalarının ortaöğretim düzeyinde biyoloji dersine uyarlanmasına ilişkin çalışmaların sınırlı olması, özellikle hücre bölünmesi gibi soyut ve öğrenilmesi güç konulara odaklanan araştırmaların yetersizliği, bu çalışmayı önemli kılmaktadır.
+
+					Bu çalışmayı literatürdeki benzer araştırmalardan ayıran temel özellik, üçüncü parti artırılmış gerçeklik uygulamalarının kullanılmamış olmasıdır. Çalışmamızda, kodları tarafımızdan geliştirilen özgün bir AG uygulaması kullanılmış; hücre bölünmesinin tüm evreleri üç boyutlu modeller ve sesli anlatımlar ile desteklenmiştir. Ayrıca geliştirilen web tabanlı öğrenme ortamı sayesinde öğrencilere konuya zaman ve mekândan bağımsız erişim olanağı sunulmuş, dijital oyun ve kutu oyunu entegrasyonu ile öğrencilerin etkileşimleri artırılmıştır.
 				</h2>
 			</div>
 		</section>
